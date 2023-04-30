@@ -32,7 +32,7 @@ const PaginationWrapper = styled.form`
     -moz-appearance: textfield;
   }
 
-  p {
+  label {
     position: absolute;
     font-size: 12px;
     right: 10px;
@@ -73,8 +73,8 @@ const Pagination = () => {
   return (
     <WrapperContainer>
       <PaginationWrapper onSubmit={paginationHandler}>
-        <p>Go to page</p>
-        <input type='number' value={pageState} onChange={pageChangeHandler} />
+        <label htmlFor='pagination'>Go to page</label>
+        <input type='number' id='pagination' value={pageState} onChange={pageChangeHandler} />
       </PaginationWrapper>
     </WrapperContainer>
   );

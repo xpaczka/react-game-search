@@ -1,11 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
-interface IGameData {
+interface IPlatformData {
+  platform: { name: string };
+}
+
+export interface IGameData {
   id: number;
   background_image: string;
   name: string;
-  platforms: [{ platform: { name: string } }] | null;
+  platforms: IPlatformData[] | null;
 }
 
 export interface ISearchData {
@@ -15,7 +19,7 @@ export interface ISearchData {
   prev: string | null;
 }
 
-interface ISearchState {
+export interface ISearchState {
   data: ISearchData | null;
   isLoading: boolean;
   error: any | null;

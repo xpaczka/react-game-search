@@ -24,7 +24,6 @@ const fetchData = async (
       dispatch(queryString(url));
     }
   } catch (err: any) {
-    console.error(err.message);
     dispatch(error(err.message));
   }
 };

@@ -11,7 +11,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <GameCardsList />
+      <GameCardsList data-testid='1' />
       {searchState.data && searchState.data?.count > 0 && <Pagination />}
     </>
   );
